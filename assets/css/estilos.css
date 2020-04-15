@@ -54,7 +54,8 @@ input[type="button"]:hover{
 input[type="email"],
 input[type="password"],
 input[type="text"],
-input[type="tel"]
+input[type="tel"],
+input[type="number"]
 {
     display: inline-block;
     text-align: left;
