@@ -1,0 +1,13 @@
+.informacion{
+    width: 70%;
+    background-color:var(--verdeclaro);
+    border:1px solid var(--verde);
+    font-size: 1.5em;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+.centrar{
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -4,7 +4,7 @@ form div,a{
 
 form a{
     color:var(--azulenlace);
-     font-weight: bold;
+     font-weight: bold; 
 }
 
 label{
