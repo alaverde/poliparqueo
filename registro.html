@@ -12,25 +12,28 @@
         <img src="./assets/img/logo.png" alt="Poliparqueo">
     </header>
     <section>
-        <form class="centrar">  
+        <form class="centrar">
             <div>
-                <label for="correo">Usuario</label>
+                <label for="nombres">Nombres</label>
+                <input type="text" name="nombres">
+            </div>
+            <div>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos">
+            </div>  
+            <div>
+                <label for="identificacion">Indentificación</label>
+                <input type="number" name="indentificacion">
+            </div>  
+            <div>
+                <label for="correo">Correo</label>
                 <input type="email" name="correo">
-            </div>
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre">
-            </div>
-            <div>
-                <label for="celular">Celular</label>
-                <input type="tel" name="celular">
             </div>
             <div>
                 <label for="tipo_usuario">Tipo Usuario</label>
                 <select name="tipo_usuario">
                     <option value="1">Estudiante</option> 
-                    <option value="2">Portería</option>
-                    <option value="3">Empleado</option>
+                    <option value="2">Empleado</option>
                 </select>
             </div>
             <div>
@@ -38,8 +41,8 @@
                 <input type="password" name="contrasena">
             </div>
             <div>
-                <label for="placa_vehiculo">Placa del vehículo</label>
-                <input type="text" name="placa_vehiculo">
+                <label for="contrasena2">Repetir Contraseña</label>
+                <input type="password" name="contrasena2">
             </div>
 
             <div class="centrar">
