@@ -1,31 +1,23 @@
-var btnRegistro=document.getElementById("btn_registrar");
-console.log(btnRegistro);
 
-function irARegistro(){
-    window.location.href="./registro.html";
-}
+$("#btn-registro").click(function(){
 
-btnRegistro.addEventListener("click",irARegistro);
-
-$("#btn_ingresar").click(function(){
-
-    formLogin = document.getElementById("login");
+    formLogin = document.getElementById("formRegistro");
 
     if(!formLogin.checkValidity()){
         $("#mensajeError").text("Todos los campos son obligatorios");
     }else{
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             //dataType: 'json', //Opcional
             //contentType: 'application/json', //Opcional
             url: 'http://localhost/poliparqueo_back/servicios/usuarios.php',
-            data: $("#login").serialize(),
+            data: $("#formRegistro").serialize(),
             success: function(response){
-                if(response.result == true){
+                /*if(response.result == true){
                     window.location.href="./ppal_adm.html";
                 }else{
                     $("#mensajeError").text("Usuario o contraseña incorrecto");
-                }
+                }*/
                 console.log(response);
             },
             error: function(response){
@@ -36,6 +28,3 @@ $("#btn_ingresar").click(function(){
     }
 
 });
-
-
-

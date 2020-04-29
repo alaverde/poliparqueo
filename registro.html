@@ -12,43 +12,43 @@
         <img src="./assets/img/logo.png" alt="Poliparqueo">
     </header>
     <section>
-        <form class="centrar">
+        <form class="centrar" id="formRegistro">
+            <input name="metodo" value="registrarUsuario" type="hidden"> 
             <div>
                 <label for="nombres">Nombres</label>
-                <input type="text" name="nombres">
+                <input type="text" name="nombres" required>
             </div>
             <div>
                 <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellidos">
+                <input type="text" name="apellidos" required>
             </div>  
             <div>
                 <label for="identificacion">Indentificación</label>
-                <input type="number" name="indentificacion">
+                <input type="number" name="identificacion" required>
             </div>  
             <div>
                 <label for="correo">Correo</label>
-                <input type="email" name="correo">
-            </div>
-            <div>
-                <label for="tipo_usuario">Tipo Usuario</label>
-                <select name="tipo_usuario">
-                    <option value="1">Estudiante</option> 
-                    <option value="2">Empleado</option>
-                </select>
+                <input type="email" name="correo" required>
             </div>
             <div>
                 <label for="contrasena">Contraseña</label>
-                <input type="password" name="contrasena">
+                <input type="password" name="contrasena" required>
             </div>
             <div>
                 <label for="contrasena2">Repetir Contraseña</label>
-                <input type="password" name="contrasena2">
+                <input type="password" name="contrasena2" required>
             </div>
+            <p id="mensajeError"></p>
 
             <div class="centrar">
-                <input type="button" value="Registrarse">
+                <input type="button" value="Registrarse" id="btn-registro">
             </div>       
         </form>               
-    </section>      
+    </section>     
+    <script
+			  src="https://code.jquery.com/jquery-3.5.0.min.js"
+			  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+			  crossorigin="anonymous"></script>
+    <script src="./assets/js/registro.js"></script>    
 </body>
 </html>

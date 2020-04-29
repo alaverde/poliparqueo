@@ -12,15 +12,17 @@
         <img src="./assets/img/logo.png" alt="Poliparqueo">
     </header>
     <section>
-        <form class="centrar">  
+        <form class="centrar" id="login"> 
+            <input name="metodo" value="validarUsuario" type="hidden"> 
             <div>
                 <label for="correo">Usuario</label>
                 <input type="email" name="correo" id="" placeholder="Ingrese su usuario / Correo" required>
             </div>
             <div>
                 <label for="contrasena">Contraseña</label>
-                <input type="password" name="contrasena" id="" placeholder="Ingrese su contraseña">
+                <input type="password" name="contrasena" id="" placeholder="Ingrese su contraseña" required>
             </div>
+            <p id="mensajeError"></p>
             <div class="centrar">
                 <input type="button" value="Registrar" id="btn_registrar">
                 <input type="button" value="Ingresar" id="btn_ingresar" >
@@ -30,6 +32,10 @@
             </div>       
         </form>               
     </section>  
+    <script
+			  src="https://code.jquery.com/jquery-3.5.0.min.js"
+			  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+			  crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>    
 </body>
 </html>
