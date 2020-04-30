@@ -33,3 +33,10 @@ function irAHistorial(){
 }
 
 btnHistorial.addEventListener("click",irAHistorial);
+
+$(document).ready(function(){
+    var permisos = localStorage.getItem("permisos");
+    if(permisos == null || permisos == "2"){
+        window.location.href="./index.html";
+    }
+});

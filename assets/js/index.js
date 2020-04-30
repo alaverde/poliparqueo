@@ -22,7 +22,13 @@ $("#btn_ingresar").click(function(){
             data: $("#login").serialize(),
             success: function(response){
                 if(response.result == true){
-                    window.location.href="./ppal_adm.html";
+                    localStorage.setItem("index", response.id);
+                    localStorage.setItem("permisos", response.permisos);
+                    if(response.permisos == 1){
+                        window.location.href="./ppal_adm.html";
+                    }else{
+                        window.location.href="./ppal_usu.html";
+                    }
                 }else{
                     $("#mensajeError").text("Usuario o contraseña incorrecto");
                 }
