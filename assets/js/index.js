@@ -43,6 +43,14 @@ $("#btn_ingresar").click(function(){
     }
 
 });
-
+$(document).ready(function(){
+    var permisos = localStorage.getItem("permisos");
+    if(permisos =="1"){
+        window.location.href="./ppal_adm.html";
+    }
+    if(permisos =="2"){
+        window.location.href="./ppal_usu.html";
+    }
+});
 
 
