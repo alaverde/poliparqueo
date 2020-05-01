@@ -24,6 +24,7 @@ $("#btn_ingresar").click(function(){
                 if(response.result == true){
                     localStorage.setItem("index", response.id);
                     localStorage.setItem("permisos", response.permisos);
+                    localStorage.setItem("nombres", response.nombres);
                     if(response.permisos == 1){
                         window.location.href="./ppal_adm.html";
                     }else{
