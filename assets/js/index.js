@@ -25,7 +25,9 @@ $("#btn_ingresar").click(function(){
                     localStorage.setItem("index", response.id);
                     localStorage.setItem("permisos", response.permisos);
                     localStorage.setItem("nombres", response.nombres);
+                    
                     if(response.permisos == 1){
+                        localStorage.setItem("parqueadero_asignado", response.parqueadero_asignado);
                         window.location.href="./ppal_adm.html";
                     }else{
                         window.location.href="./ppal_usu.html";

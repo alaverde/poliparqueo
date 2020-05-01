@@ -17,7 +17,7 @@ $(document).ready(function(){
                 //dataType: 'json', //Opcional
                 //contentType: 'application/json', //Opcional
                 url: 'http://localhost/poliparqueo_back/servicios/registros.php',
-                data: $("#form-salida").serialize(),
+                data: $("#form-salida").serialize()+"&parqueadero="+localStorage.getItem("parqueadero_asignado"),
                 success: function(response){
                     if(response.result == true){
                         $('#form-salida')[0].reset();

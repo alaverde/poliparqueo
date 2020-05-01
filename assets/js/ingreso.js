@@ -12,12 +12,13 @@ $(document).ready(function(){
         if(!formIngreso.checkValidity()){
             $("#mensajeError").text("Todos los campos son obligatorios");
         }else{
+
             $.ajax({
                 type: 'POST',
                 //dataType: 'json', //Opcional
                 //contentType: 'application/json', //Opcional
                 url: 'http://localhost/poliparqueo_back/servicios/registros.php',
-                data: $("#form-ingreso").serialize(),
+                data: $("#form-ingreso").serialize()+"&parqueadero="+localStorage.getItem("parqueadero_asignado"),
                 success: function(response){
                     if(response.result == true){
                         $('#form-ingreso')[0].reset();
