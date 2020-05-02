@@ -17,7 +17,6 @@ function irASalida(){
 btnSalida.addEventListener("click",irASalida);
 
 var btnPlazas=document.getElementById("btn_Plazas");
-console.log(btnPlazas);
 
 function irAPlazas_Disponibles(){
     window.location.href="./plazas_dispo.html";
@@ -26,7 +25,6 @@ function irAPlazas_Disponibles(){
 btnPlazas.addEventListener("click",irAPlazas_Disponibles);
 
 var btnHistorial=document.getElementById("btn_Historial");
-console.log(btnHistorial);
 
 function irAHistorial(){
     window.location.href="./historial.html";

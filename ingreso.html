@@ -19,11 +19,12 @@
        </div>
     </header>
     <section>
-        <form class="centrar" id="form-ingreso">  
+        <form class="centrar" id="form-ingreso">
+            <h2>INGRESO VEHICULOS</h2>  
             <input name="metodo" value="registrarIngreso" type="hidden"> 
             <div>
                 <label for="placa_vehiculo">Placa del vehículo</label>
-                <input type="text" name="placa_vehiculo" required>
+                <input type="text" name="placa_vehiculo" maxlength="6" onkeyup="javascript:this.value=this.value.toUpperCase();" required>
             </div>
             <div>
                 <label for="identficacion">Identificación</label>

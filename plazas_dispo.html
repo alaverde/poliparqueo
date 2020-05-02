@@ -8,18 +8,31 @@
     <link rel="stylesheet" href="./assets/css/plazas_dispo.css">
 </head>
 <body>
-    <header class="centrar">
-        <img src="./assets/img/logo.png" alt="Poliparqueo">
+    <header>
+        <a href="./index.html"><img src="./assets/img/logo.png" alt="Poliparqueo"></a>
+       <div class="boton-usuario" style="float:right">
+            <div class="logo-usuario">
+                <img src="./assets/img/user.png" alt="Usuario" >
+                <p id="nombre_usuario"></p>
+            </div>
+            <p class="btn-cerrar-sesion" id="btn-cerrar-sesion">Cerrar Sesión</p>
+       </div>
     </header>
-    <div class="informacion"  class="centrar">
-        <label>NÚMERO DE PLAZAS DISPONIBLES:</label><br>
-       <br> <input type="number" name="numero de plazas disponibles" id="plazas_libres" readonly>
+    <div id="lista-parqueaderos" class="informacion"  class="centrar">
+        <h2>PLAZAS DISPONIBLES</h2>
+        <template v-if="items.length == 0 ">
+            <p>Consultando...</p>
+        </template>
+        <template v-for="item in items" v-if="items">
+            <p>{{item.nombre}} : {{ item.plazas_libres }}</p>
+        </template>
     </div>
     
     <script
 			  src="https://code.jquery.com/jquery-3.5.0.min.js"
 			  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-			  crossorigin="anonymous"></script>
-      <script src="./assets/js/plazas_dispo.js"></script>
+              crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./assets/js/plazas_dispo.js"></script>
 </body>
 </html>

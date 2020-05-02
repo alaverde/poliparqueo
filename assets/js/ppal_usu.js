@@ -1,3 +1,17 @@
+var btnPlazas=document.getElementById("btn_Plazas");
+
+function irAPlazas_Disponibles(){
+    window.location.href="./plazas_dispo.html";
+}
+btnPlazas.addEventListener("click",irAPlazas_Disponibles);
+
+var btnHistorial=document.getElementById("btn_Historial");
+
+function irAHistorial(){
+    window.location.href="./historial.html";
+}
+
+btnHistorial.addEventListener("click",irAHistorial);
 
 $(document).ready(function(){
     var permisos = localStorage.getItem("permisos");

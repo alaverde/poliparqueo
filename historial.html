@@ -9,22 +9,40 @@
 </head>
 <body>
     <header>
-        <img src="./assets/img/logo.png" alt="Poliparqueo">
-        <img src="./assets/img/us.png" alt="Administrador" style="float:right">
-     </header>
-    <div class="informacion centrar">
-            <span>Hora de Ingreso:</span>
-            <span>00:00</span>
-       <br> <span>Parqueadero:</span>
-            <span>00</span>
-        <br><span>Fecha:</span>
-            <span>00/00/00</span>
-    </div>
+        <a href="./index.html"><img src="./assets/img/logo.png" alt="Poliparqueo"></a>
+       <div class="boton-usuario" style="float:right">
+            <div class="logo-usuario">
+                <img src="./assets/img/user.png" alt="Usuario" >
+                <p id="nombre_usuario"></p>
+            </div>
+            <p class="btn-cerrar-sesion" id="btn-cerrar-sesion">Cerrar Sesión</p>
+       </div>
+    </header>
+    <h2>HISTORIAL</h2>  
+    <input type="button" value="Descargar Reporte" id="btn-reporte">
 
+    <div id="historial">
+        <template v-if="items.length == 0 ">
+            <div class="centrar">
+                <p>Consultando...</p>
+            </div>
+        </template>
+        <template v-for="item in items" v-if="items">
+            <div class="informacion centrar">
+                    <span><span class="etiqueta">Fecha: </span>{{item.fecha}}</span><br>
+                    <span v-if="item.id == 0"><span class="etiqueta">Usuario: </span>{{item.identificacion}} - {{item.nombres}}<br></span>
+                    <span><span class="etiqueta">Parqueadero: </span>{{item.parqueadero}}</span><br>
+                    <span><span class="etiqueta">Vehiculo: </span>{{item.placa}}</span><br>
+                    <span><span class="etiqueta">Accion: </span>{{item.accion}}</span>
+            </div>
+        </template>
+    </div>
+    
     <script
 			  src="https://code.jquery.com/jquery-3.5.0.min.js"
 			  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
 			  crossorigin="anonymous"></script>
-      <script src="./assets/js/historial.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./assets/js/historial.js"></script>
 </body>
 </html>
